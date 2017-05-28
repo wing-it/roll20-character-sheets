@@ -1,0 +1,50 @@
+.sheet-section { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
+	display: inline-block;
+	position: relative;
+}
+
+.sheet-section .sheet-content {
+	position: relative;
+	height: auto;
+	margin: 25px;
+	padding: 2px;
+	background-color: white;
+}
+
+.sheet-content table {
+	border-collapse: collapse;
+	width: 100%;
+	text-align: center;
+	border: 2px solid #c9a800;
+}
+
+.sheet-content table td,
+.sheet-content table th, {
+	padding: 6px 3px 3px;
+	border: 2px solid #c9a800;
+}
+
+.sheet-content table tfoot td {
+	border: none;
+}
+
+.sheet-cthulhu-container {
+	width: 750px;
+	height: 954px;
+	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
+	background-image: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/background.png');
+}
+
+.sheet-cthulhu-section { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
+	background-image: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/tl-corner.png'),
+		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/tr-corner.png'),
+		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/bl-corner.png'),
+		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/br-corner.png'),
+		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/top-side.png'),
+		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/bottom-side.png'),
+		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/left-side.png'),
+		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/right-side.png');
+	background-position: left top, right top, left bottom, right bottom, center top, center bottom, left center, right center;
+	background-repeat: no-repeat;
+	background-size: auto, auto, auto, auto, 70% 56px, 70% 56px, 56px 80%, 56px 80%;
+}
