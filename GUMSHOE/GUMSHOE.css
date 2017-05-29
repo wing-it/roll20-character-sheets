@@ -24,9 +24,10 @@
 }
 
 .sheet-content table td,
-.sheet-content table th, {
+.sheet-content table th {
 	padding: 6px 3px 3px;
 	border: 2px solid #c9a800;
+	width: 25%;
 }
 
 .sheet-content table tfoot td {
@@ -37,7 +38,7 @@
 	width: 750px;
 	height: 964px;
 	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
-	background-image: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/background.png');
+	background: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/background.png') no-repeat;
 }
 
 .sheet-cthulhu-header {
