@@ -1,4 +1,9 @@
-.sheet-section { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
+.sheet-container {
+	padding: 15px;
+}
+
+.sheet-section,
+.sheet-header { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
 	display: inline-block;
 	position: relative;
 }
@@ -30,9 +35,15 @@
 
 .sheet-cthulhu-container {
 	width: 750px;
-	height: 954px;
+	height: 964px;
 	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
 	background-image: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/background.png');
+}
+
+.sheet-cthulhu-header {
+	background-image: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/toc-header.png');
+	width: 300px;
+	height: 90px;
 }
 
 .sheet-cthulhu-section { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
