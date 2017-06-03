@@ -86,29 +86,42 @@ div.sheet-input-row {
 
 .sheet-content table td,
 .sheet-content table th {
-	padding: 6px 3px 3px;
+	padding: 12px 3px 12px;
 	border: 1px solid #c9a800;
 	width: 25%;
 	font-size: 10px;
+	position: relative;
 }
 
 .sheet-content table tfoot td,
 .sheet-content table th {
 	font-size: 13px;
+	padding: 6px 3px 3px;
 }
 
-.sheet-content td label {
+.sheet-content td input[type="radio"],
+.sheet-content td input[type="radio"] + span {
 	font-size: 10px;
 	text-align: center;
-	margin: 0;
+	padding-top: 2px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	border: 2px solid rgba(0,0,0,0);
+	box-sizing: border-box;
 }
 
-.sheet-content td label:checked {
-	color: blue;
+.sheet-content td input[type="radio"]:checked + span {
+	border-color: #c9a800;
+	font-weight: bold;
+	font-size: 12px;
 }
 
 .sheet-content td input[type="radio"] {
-	display: none;
+	z-index: 99;
+	height: 100%;
+	opacity: 0;
 }
 
 div.sheet-abilities {
@@ -141,7 +154,7 @@ div:last-of-type.sheet-abilities-col {
 	border: solid #c9a800;
 	border-width: 0 0 1px 1px;
 	padding: 2px;
-	font-size: 11px;
+	font-size: 10px;
 	line-height: 25px;
 	float: left;
 }
@@ -211,11 +224,10 @@ div:last-of-type.sheet-abilities-col {
 }
 
 .sheet-cthulhu-container {
-	width: 750px;
-	height: 964px;
+	width: 850px;
 	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
 	background: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/background.png') no-repeat;
-	background-size: 100%;
+	background-size: cover;
 }
 
 .sheet-cthulhu-section { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
