@@ -8,10 +8,11 @@
 
 		<div class="sheet-col section cthulhu-section">
 			<div class="content">
-				Investigator Name:<br>
-				Drive:<br>
-				Occupation:<br>
+				<div class="input-row"><label>Name:</label><input type="text"></div>
+				<div class="input-row"><label>Drive:</label><input type="text"></div>
+				<div class="input-row"><label>Occupation:</label><input type="text"></div>
 				Occupational benefits:<br>
+				<textarea></textarea>
 			</div>
 		</div>
 
@@ -31,28 +32,28 @@
 						</tr>
 					</tfoot>
 					<tr>
-						<td>0</td>
-						<td>1</td>
-						<td>2</td>
-						<td>3</td>
+						<td><label>0<input type="radio"></label></td>
+						<td><label>1<input type="radio"></label></td>
+						<td><label>2<input type="radio"></label></td>
+						<td><label>3<input type="radio"></label></td>
 					</tr>
 					<tr>
-						<td>4</td>
-						<td>5</td>
-						<td>6</td>
-						<td>7</td>
+						<td><label>4<input type="radio" checked="true"></label></td>
+						<td><label>5<input type="radio"></label></td>
+						<td><label>6<input type="radio"></label></td>
+						<td><label>7<input type="radio"></label></td>
 					</tr>
 					<tr>
-						<td>8</td>
-						<td>9</td>
-						<td>10</td>
-						<td>11</td>
+						<td><label>8<input type="radio"></label></td>
+						<td><label>9<input type="radio"></label></td>
+						<td><label>10<input type="radio"></label></td>
+						<td><label>11<input type="radio"></label></td>
 					</tr>
 					<tr>
-						<td>12</td>
-						<td>13</td>
-						<td>14</td>
-						<td>15</td>
+						<td><label>12<input type="radio"></label></td>
+						<td><label>13<input type="radio"></label></td>
+						<td><label>14<input type="radio"></label></td>
+						<td><label>15<input type="radio"></label></td>
 					</tr>
 				</table>
 
@@ -161,78 +162,264 @@
 					<div class="abilities-col">
 						<div class="abilities-header">Academic</div>
 						<div>
-							Accounting
-							<span><input type="number" />/4</span>
+							<div>Accounting</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
 						</div>
-						<div>Anthropology</div>
-						<div>Archaeology</div>
-						<div>Architecture</div>
-						<div>Art History</div>
-						<div>Biology</div>
-						<div>Cthulhu Myuthos</div>
-						<div>Cryptography</div>
-						<div>Geology</div>
-						<div>History</div>
-						<div class="languages">Languages</div>
-						<div class="language">Spanish</div>
-						<div>Law</div>
-						<div>Library Use</div>
-						<div>Medicine</div>
-						<div>Occult</div>
-						<div>Physics</div>
-						<div>Theology</div>
+						<div>
+							<div>Anthropology</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Archaeology</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Architecture</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Art History</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Biology</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Cthulhu Myuthos</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Cryptography</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Geology</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>History</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Languages</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+							<ul>
+								<li>Spanish</li>
+								<li>Dutch</li>
+							</ul>
+						</div>
+						<div>
+							<div>Law</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Library Use</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Medicine</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Occult</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Physics</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Theology</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
 					</div>
 					<div class="abilities-col">
 						<div class="abilities-header">Interpersonal</div>
-						<div>Assess Honesty</div>
-						<div>Bargain</div>
-						<div>Bureaucracy</div>
-						<div>Cop Talk</div>
-						<div>Credit Rating</div>
-						<div>Flattery</div>
-						<div>Interrogation</div>
-						<div>Intimidation</div>
-						<div>Oral History</div>
-						<div>Reassurance</div>
-						<div>Streetwise</div>
+						<div>
+							<div>Assess Honesty</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Bargain</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Bureaucracy</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Cop Talk</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Credit Rating</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Flattery</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Interrogation</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Intimidation</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Oral History</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Reassurance</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Streetwise</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
 						<div class="abilities-header">Technical</div>
-						<div>Art</div>
-						<div>Astronomy</div>
-						<div>Chemistry</div>
-						<div>Craft</div>
-						<div>Evidence Collection</div>
-						<div>Forensics</div>
-						<div>Locksmith</div>
-						<div>Outdoorsman</div>
-						<div>Pharmacy</div>
-						<div>Photography</div>
+						<div>
+							<div>Art</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Astronomy</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Chemistry</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Craft</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Evidence Collection</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Forensics</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Locksmith</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Outdoorsman</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Pharmacy</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Photography</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
 					</div>
 					<div class="abilities-col">
 						<div class="abilities-header">General</div>
-						<div>Athletics</div>
-						<div>Conceal</div>
-						<div>Disguise</div>
-						<div>Driving</div>
-						<div>Electrical Repair</div>
-						<div>Explosives</div>
-						<div>Filch</div>
-						<div>Firearms</div>
-						<div>First Aid</div>
-						<div>Fleeing</div>
-						<div>Health</div>
-						<div>Hypnosis</div>
-						<div>Mechanical Repair</div>
-						<div>Piloting</div>
-						<div>Preparedness</div>
-						<div>Psychoanalysis</div>
-						<div>Riding</div>
-						<div>Sanity</div>
-						<div>Stability</div>
-						<div>Scuffling</div>
-						<div>Sense Trouble</div>
-						<div>Shadowing</div>
-						<div>Stealth</div>
-						<div>Weapons</div>
+						<div>
+							<div>Athletics</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Conceal</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Disguise</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Driving</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Electrical Repair</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Explosives</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Filch</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Firearms</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>First Aid</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Fleeing</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Health</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Hypnosis</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Mechanical Repair</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Piloting</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Preparedness</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Psychoanalysis</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Riding</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Sanity</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Stability</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Scuffling</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Sense Trouble</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Shadowing</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Stealth</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
+						<div>
+							<div>Weapons</div>
+							<span><input type="checkbox"><input value="0" type="number">/4</span>
+						</div>
 					</div>
 				</div>
 			</div>

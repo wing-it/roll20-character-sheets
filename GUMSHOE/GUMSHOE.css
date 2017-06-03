@@ -13,6 +13,10 @@
 	margin-top: 20px;
 }
 
+input[type=number]::-webkit-inner-spin-button {
+	
+}
+
 .sheet-col1,
 .sheet-col2 {
 	clear: both;
@@ -32,22 +36,58 @@
 .sheet-section .sheet-content {
 	position: relative;
 	height: auto;
-	margin: 25px;
+	margin: 20px;
 	padding: 2px;
 	background-color: white;
+}
+
+.sheet-content label,
+.sheet-content input {
+	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
+	font-weight: normal;
+	font-size: 13px;
+}
+
+div.sheet-input-row {
+	display: table;
+	width: 100%;
+}
+
+.sheet-input-row label,
+.sheet-input-row input {
+	display: table-cell;
+	width: 1px;
+}
+
+.sheet-input-row input {
+	width: 100%;
+}
+
+.sheet-content input[type=text] {
+	padding: 0;
+	border-width: 0 0 1px;
+	box-shadow: none;
+	border-radius: 0;
+	background-color: rgba( 0, 0, 0, 0 );
+}
+
+.sheet-content textarea {
+	width: 100%;
+	box-sizing: border-box;
+	height: 64px;
 }
 
 .sheet-content table {
 	border-collapse: collapse;
 	width: 100%;
 	text-align: center;
-	border: 2px solid #c9a800;
+	border: 1px solid #c9a800;
 }
 
 .sheet-content table td,
 .sheet-content table th {
 	padding: 6px 3px 3px;
-	border: 2px solid #c9a800;
+	border: 1px solid #c9a800;
 	width: 25%;
 	font-size: 10px;
 }
@@ -57,18 +97,31 @@
 	font-size: 13px;
 }
 
+.sheet-content td label {
+	font-size: 10px;
+	text-align: center;
+	margin: 0;
+}
+
+.sheet-content td label:checked {
+	color: blue;
+}
+
+.sheet-content td input[type="radio"] {
+	display: none;
+}
+
 div.sheet-abilities {
 	display: flex;
-	flex-flow: row wrap;
-	align-content: stretch;
 	padding: 0;
 }
 
 .sheet-abilities-col .sheet-abilities-header {
 	font-weight: bold;
 	font-size: 13px;
-	width: 100%;
-	margin-bottom: 0px;
+	height: 19px;
+	color: white;
+	background-color: #c9a800;
 }
 
 .sheet-abilities-col {
@@ -76,7 +129,6 @@ div.sheet-abilities {
 	flex-grow: 1;
 	display: flex;
 	flex-direction: column;
-	align-content: stretch
 	border: solid #c9a800;
 	border-width: 1px 0 0;
 }
@@ -88,20 +140,74 @@ div:last-of-type.sheet-abilities-col {
 .sheet-abilities-col div {
 	border: solid #c9a800;
 	border-width: 0 0 1px 1px;
-	padding: 3px;
-	box-sizing: border-box;
+	padding: 2px;
 	font-size: 11px;
-	line-height: 24px;
+	line-height: 25px;
+	float: left;
 }
 
-div.sheet-languages {
-	border-bottom-width: 0;
+.sheet-abilities-col div::first-line {
+	line-height: 18px;
 }
 
-div.sheet-language {
+.sheet-abilities-col div div {
+	width: 59.5%;
+	padding: 0;
+	border: 0;
+}
+
+.sheet-abilities-col input[type=number] {
+	font-weight: bold;
+	line-height: 16px;
+	font-size: 12px;
+	border-radius: 2px;
+	text-align: right;
+	padding: 0;
+	width: 30px;
+}
+
+.sheet-abilities-col input[type=checkbox] {
+	width: 12px;
+	height: 12px;
+	border: none;
+	box-shadow: none;
+	margin-right: 5px;
+	opacity: .2;
+	background: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/occupation.png') no-repeat;
+	background-size: contain;
+	-webkit-appearance: none;
+}
+
+.sheet-abilities-col input[type=checkbox]:checked {
+	opacity: 1;
+}
+
+.sheet-abilities-col span {
+	font-size: 10px;
+	font-weight: normal;
+	float: right;
+	line-height: 18px;
+	width: 40%;
+}
+
+.sheet-abilities-col div ul {
+	list-style-type: none;
+	margin: 0 0 0 15px;
 	font-style: italic;
-	padding-left: 20px;
-	border-top: 1px solid white;
+	clear: both;
+}
+
+.sheet-abilities-col div ul li {
+	padding-bottom: 4px;
+	padding-top: 2px;
+}
+
+.sheet-abilities-col div ul li:first-of-type {
+	padding-top: 4px;
+}
+
+.sheet-abilities-col div ul li:last-of-type {
+	padding-bottom: 2px;
 }
 
 .sheet-cthulhu-container {
