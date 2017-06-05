@@ -1,3 +1,7 @@
+input[type=number]::-webkit-inner-spin-button {
+
+}
+
 .sheet-container {
 	padding: 15px;
 }
@@ -13,10 +17,6 @@
 	margin-top: 20px;
 }
 
-input[type=number]::-webkit-inner-spin-button {
-	
-}
-
 .sheet-col1,
 .sheet-col2 {
 	clear: both;
@@ -24,6 +24,7 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .sheet-col1 {
+	display: inline-block;
 	width: calc(25% - 15px);
 	margin-right: 15px;
 }
@@ -41,8 +42,8 @@ input[type=number]::-webkit-inner-spin-button {
 	background-color: white;
 }
 
-.sheet-content label,
-.sheet-content input {
+.sheet-input-row label,
+.sheet-input-row input {
 	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
 	font-weight: normal;
 	font-size: 13px;
@@ -64,11 +65,12 @@ div.sheet-input-row {
 }
 
 .sheet-content input[type=text] {
+	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
 	padding: 0;
 	border-width: 0 0 1px;
 	box-shadow: none;
 	border-radius: 0;
-	background-color: rgba( 0, 0, 0, 0 );
+	background-color: transparent;
 }
 
 .sheet-content textarea {
@@ -127,6 +129,7 @@ div.sheet-input-row {
 div.sheet-abilities {
 	display: flex;
 	padding: 0;
+	margin-top: 10px;
 }
 
 .sheet-abilities-col .sheet-abilities-header {
@@ -135,6 +138,7 @@ div.sheet-abilities {
 	height: 19px;
 	color: white;
 	background-color: #c9a800;
+	padding: 3px 0 2px 1px;
 }
 
 .sheet-abilities-col {
@@ -150,12 +154,12 @@ div:last-of-type.sheet-abilities-col {
 	border-right-width: 1px;
 }
 
-.sheet-abilities-col div {
+.sheet-abilities-col .sheet-abilities-item {
 	border: solid #c9a800;
 	border-width: 0 0 1px 1px;
-	padding: 2px;
+	padding: 2px 2px 1px 2px;
 	font-size: 10px;
-	line-height: 25px;
+	line-height: 24px;
 	float: left;
 }
 
@@ -163,20 +167,36 @@ div:last-of-type.sheet-abilities-col {
 	line-height: 18px;
 }
 
-.sheet-abilities-col div div {
-	width: 59.5%;
-	padding: 0;
-	border: 0;
+.sheet-abilities-col .sheet-abilities-title {
+	display: inline-block;
+	width: 54%;
+	padding: 2px 0 0;
+}
+
+.sheet-abilities-title input[type=text] {
+	font-size: 10px;
+	line-height: 13px;
+	width: 100%;
+	margin-top: -2px;
 }
 
 .sheet-abilities-col input[type=number] {
-	font-weight: bold;
-	line-height: 16px;
-	font-size: 12px;
 	border-radius: 2px;
 	text-align: right;
 	padding: 0;
+}
+
+.sheet-abilities-col input[type=number].sheet-available {
+	font-weight: bold;
+	line-height: 16px;
+	font-size: 12px;
 	width: 30px;
+}
+
+.sheet-abilities-col input[type=number].sheet-max {
+	line-height: 14px;
+	font-size: 10px;
+	width: 28px;
 }
 
 .sheet-abilities-col input[type=checkbox] {
@@ -195,32 +215,35 @@ div:last-of-type.sheet-abilities-col {
 	opacity: 1;
 }
 
-.sheet-abilities-col span {
+.sheet-abilities-col .sheet-abilities-title + span {
 	font-size: 10px;
 	font-weight: normal;
 	float: right;
 	line-height: 18px;
-	width: 40%;
+	width: 45%;
 }
 
-.sheet-abilities-col div ul {
-	list-style-type: none;
-	margin: 0 0 0 15px;
+.sheet-abilities-col .sheet-languages {
+	margin: 0 0 5px 15px;
+}
+
+.sheet-languages input {
 	font-style: italic;
-	clear: both;
+	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
+	font-size: 10px;
+	width: 90%;
 }
 
-.sheet-abilities-col div ul li {
-	padding-bottom: 4px;
-	padding-top: 2px;
+.sheet-abilities .btn {
+	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
+	font-size: 10px;
+	padding: 2px 4px 0;
+	margin-bottom: 2px;
 }
 
-.sheet-abilities-col div ul li:first-of-type {
-	padding-top: 4px;
-}
-
-.sheet-abilities-col div ul li:last-of-type {
-	padding-bottom: 2px;
+.sheet-abilities .repcontrol {
+	width: 50%;
+	margin-left: 50%;
 }
 
 .sheet-cthulhu-container {
