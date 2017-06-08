@@ -92,6 +92,7 @@ div.sheet-input-row {
 	width: 100%;
 	box-sizing: border-box;
 	height: 64px;
+	resize: vertical;
 }
 
 .sheet-content table {
