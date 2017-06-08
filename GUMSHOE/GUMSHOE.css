@@ -17,6 +17,21 @@ input[type=number]::-webkit-inner-spin-button {
 	margin-top: 20px;
 }
 
+.sheet-flex-holder {
+	display: flex;
+	margin-top: 20px;
+}
+
+.sheet-flex-holder .sheet-section {
+	width: 50%;
+	margin-right: 20px;
+	flex-direction: column;
+}
+
+.sheet-flex-holder .sheet-section:last-of-type {
+	margin-right: 0px;
+}
+
 .sheet-col1,
 .sheet-col2 {
 	clear: both;
