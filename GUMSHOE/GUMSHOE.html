@@ -465,43 +465,22 @@
 			<div class="section cthulhu-section" style="width: 100%;">
 				<div class="content weapons">
 					<h2>Weapons</h2>
-					<!--
-					<table>
-						<tr>
-							<th style="width: 25%;">Name</th>
-							<th style="width: 15%;">Type</th>
-							<th style="width: 60%;">
-								<table>
-									<tr>
-										<th colspan="4" style="width: 100%">Range</th>
-									</tr>
-									<tr>
-										<td>Point-Blank</td>
-										<td>Close</td>
-										<td>Near</td>
-										<td>Far</td>
-									</tr>
-								</table>
-							</th>
-						</tr>
-						<tr>
-							<td>Shotgun</td>
-						</tr>
-					</table>
-					-->
 
-					<table>
-						<tr>
-							<td colspan="2"><input type="text" value="Weapon"></td>
-							<td colspan="2"><input type="text" value="Type"><label>Heavy</label><input type="checkbox"></td>
-						</tr>
-						<tr>
-							<td>Point-Blank</td>
-							<td>Close</td>
-							<td>Near</td>
-							<td>Far</td>
-						</tr>
-					</table>
+					<div class="weapon">
+						<input type="text" placeholder="Weapon Name">
+						<select>
+							<option value="melee">Melee</option>
+							<option value="pistol">Pistol</option>
+							<option value="Rifle">Rifle</option>
+							<option value="Shotgun">Shotgun</option>
+						</select>
+						Heavy <input type="checkbox">
+						<div>
+							<div>Point-Blank</div>
+							<div>
+						</div>
+					</div>
+
 				</div>
 			</div>
 
