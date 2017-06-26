@@ -1,13 +1,12 @@
-input[type=number]::-webkit-inner-spin-button {
-
-}
+input[type=number]::-webkit-inner-spin-button {}
 
 .sheet-container {
 	padding: 15px;
 }
 
 .sheet-section,
-.sheet-header { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
+.sheet-header {
+	/* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
 	display: inline-block;
 	position: relative;
 	margin: auto;
@@ -17,21 +16,15 @@ input[type=number]::-webkit-inner-spin-button {
 	margin-top: 20px;
 }
 
-.sheet-flex-holder {
-	display: flex;
-	align-items: flex-start;
-	align-content: flex-start;
-	margin-top: 20px;
+.sheet-container .sheet-2colrow .sheet-col {
+	width: calc(50% - 15px);
+	margin-right: 15px;
+	margin-top: 15px;
 }
 
-.sheet-flex-holder .sheet-section {
-	width: 50%;
-	margin-right: 20px;
-	flex-direction: column;
-}
-
-.sheet-flex-holder .sheet-section:last-of-type {
+.sheet-container .sheet-2colrow .sheet-col:last-of-type {
 	margin-right: 0px;
+	width: calc(50% - 12px);
 }
 
 .sheet-col1,
@@ -61,10 +54,12 @@ input[type=number]::-webkit-inner-spin-button {
 }
 
 .sheet-input-row label,
-.sheet-input-row input {
-	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
+.sheet-input-row input[type=text],
+.sheet-input-row select {
 	font-weight: normal;
 	font-size: 13px;
+	display: table-cell;
+	width: 1px;
 }
 
 div.sheet-input-row {
@@ -72,18 +67,17 @@ div.sheet-input-row {
 	width: 100%;
 }
 
-.sheet-input-row label,
-.sheet-input-row input {
-	display: table-cell;
-	width: 1px;
-}
-
-.sheet-input-row input {
+.sheet-input-row input[type=text],
+.sheet-input-row select,
+.sheet-input-row div label {
 	width: 100%;
 }
 
+.sheet-input-row input[type=checkbox] {
+	margin-right: 5px;
+}
+
 .sheet-content input[type=text] {
-	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
 	padding: 0;
 	border-width: 0 0 1px;
 	box-shadow: none;
@@ -94,7 +88,7 @@ div.sheet-input-row {
 .sheet-content textarea {
 	width: 100%;
 	box-sizing: border-box;
-	height: 64px;
+	height: 95px;
 	resize: vertical;
 }
 
@@ -129,7 +123,7 @@ div.sheet-input-row {
 	top: 0;
 	left: 0;
 	width: 100%;
-	border: 2px solid rgba(0,0,0,0);
+	border: 2px solid rgba(0, 0, 0, 0);
 	box-sizing: border-box;
 }
 
@@ -225,7 +219,7 @@ div:last-of-type.sheet-abilities-col {
 	box-shadow: none;
 	margin-right: 5px;
 	opacity: .2;
-	background: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/occupation.png') no-repeat;
+	background: url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/occupation.png") no-repeat;
 	background-size: contain;
 	-webkit-appearance: none;
 }
@@ -248,13 +242,11 @@ div:last-of-type.sheet-abilities-col {
 
 .sheet-languages input {
 	font-style: italic;
-	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
 	font-size: 10px;
 	width: 90%;
 }
 
 .sheet-abilities .btn {
-	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
 	font-size: 10px;
 	padding: 2px 4px 0;
 	margin-bottom: 2px;
@@ -265,46 +257,151 @@ div:last-of-type.sheet-abilities-col {
 	margin-left: 50%;
 }
 
+.sheet-weapons .sheet-options-flag {
+    opacity: 0;    
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 18px;
+    height: 18px;
+    z-index: 2;
+}
+
+.sheet-weapons .sheet-options-flag + span {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    white-space: nowrap;
+    width: 18px;
+    height: 18px;
+    font-size: 20px;
+    font-family: pictos;
+    color: #A0A0A0;
+    cursor: pointer;
+    margin-top: 0px;
+    display: none;
+}
+
+.sheet-weapons .sheet-options-flag:checked + span {
+	color: black;
+	display: block;
+}
+
+.sheet-weapons .sheet-weapon:hover .sheet-options-flag + span {
+	display: block;
+}
+
+.sheet-weapons .sheet-options {
+	display: none;
+}
+
+.sheet-weapons .sheet-options-flag:checked ~ .sheet-options{
+	display: flex;
+}
+
+.sheet-weapons .sheet-options-flag:checked ~ .sheet-display{
+	display: none;
+}
+
+.sheet-section .sheet-weapon {
+	border: 1px solid #c9a800;
+	padding: 5px;
+	position: relative;
+}
+
+.sheet-weapon .sheet-weapon-name {
+	border: none;
+	font-weight: bold;
+	font-size: 18px;
+	width: 60%;
+	margin-left: 5px;
+}
+
+.sheet-weapon .sheet-weapon-skill {
+	border: none;
+	font-size: 14px;
+	color: #bbb;
+	width: 30%;
+	text-align: right;
+}
+
+.sheet-weapon .sheet-weapon-rollers {
+	display: flex;
+	margin-top: 10px;
+}
+
+.sheet-options .sheet-row {
+	display: block;
+	width: 100%;
+}
+
+.sheet-weapon-rollers button {
+	width: 25%;
+	text-align: center;
+	font-size: 10px;
+	margin: 5px;
+}
+
+.sheet-weapon-rollers button b {
+	font-size: 13px;
+	display: block;
+}
+
+.sheet-weapons .sheet-options-col {
+	width: 50%;
+}
+
+.sheet-options-col select {
+	margin-top: 5px;
+}
+
+.sheet-checks label {
+	display: block;
+	width: 100%;
+	margin: 0 0 0 25px;
+}
+
+/*-------------------------------------------*/
+/*------------- Cthulhu Styles---------------*/
+/*-------------------------------------------*/
+
 .sheet-cthulhu-container {
 	width: 850px;
-	font-family: 'Rockwell', 'Courier New', 'Times New Roman', serif;
-	background: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/background.png') no-repeat;
+	background: url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/background.png") no-repeat;
 	background-size: cover;
 }
 
-.sheet-cthulhu-section { /* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
-	background-image: url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/tl-corner.png'),
-		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/tr-corner.png'),
-		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/bl-corner.png'),
-		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/br-corner.png'),
-		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/top-side.png'),
-		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/bottom-side.png'),
-		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/left-side.png'),
-		url('https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/right-side.png');
+.sheet-cthulhu-container,
+.sheet-cthulhu-container p,
+.sheet-cthulhu-container input,
+.sheet-cthulhu-container select,
+.sheet-cthulhu-container label,
+.sheet-cthulhu-container button,
+.sheet-cthulhu-container .btn {
+	font-family: "Rockwell", "Courier New", "Times New Roman", serif;
+}
+
+.sheet-cthulhu-container .sheet-section {
+	/* width: min: 120px; max: 630px; height: min: 150px; max: 900px; */
+	background-image: url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/tl-corner.png"),
+					  url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/tr-corner.png"),
+					  url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/bl-corner.png"),
+					  url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/br-corner.png"),
+					  url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/top-side.png"),
+					  url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/bottom-side.png"),
+					  url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/left-side.png"),
+					  url("https://raw.githubusercontent.com/wing-it/roll20-character-sheets/gumshoe/GUMSHOE/images/toc/right-side.png");
 	background-position: left top, right top, left bottom, right bottom, center top, center bottom, left center, right center;
 	background-repeat: no-repeat;
 	background-size: auto, auto, auto, auto, 70% 56px, 70% 56px, 56px 80%, 56px 80%;
+	min-height: 150px;
+	min-width: 120px;
 }
 
-.sheet-weapons table {
-	border: none;
-}
+/*-------------------------------------------*/
+/*------------- Roll Templates --------------*/
+/*-------------------------------------------*/
 
-.sheet-weapons table th {
-	border-width: 0 1px 2px;
-	padding: 0;
-}
-
-.sheet-weapons th th {
-	border: none;
-}
-
-.sheet-weapons th td {
-	font-weight: normal;
-	font-size: 11px;
-	border: none;
-}
-
-.sheet-weapons table td {
-	padding: 0;
+.sheet-rolltemplate-cthulhu {
+	
 }
